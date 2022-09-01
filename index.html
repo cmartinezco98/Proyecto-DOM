@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-dark>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#fcd618" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/nomalizer.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ejercicios Practicos del DOM</title>
+  </head>
+  <body data-dark>
+    <div id="network"></div>
+    <header class="section-header">
+      <div class="contenedor">
+        <h1>EJERCICIOS DEL DOM</h1>
+      </div>
+    </header>
+
+    <button class="btn" id="btn-nav-hamburguesa">
+      <div class="menu-hamburguesa">
+        <div class="uno barra"></div>
+        <div class="dos barra"></div>
+        <div class="tres barra"></div>
+      </div>
+    </button>
+
+    <nav id="nav-principal">
+      <a id="btn-enlace" href="#seccion1"> Reloj Digital y Alarma Sonora </a>
+      <a id="btn-enlace" href="#seccion2"> Eventos del teclado </a>
+      <a id="btn-enlace" href="#seccion3"> Countdown </a>
+      <a id="btn-enlace" href="#seccion4"> Responsive with JavaScript </a>
+      <a id="btn-enlace" href="#seccion5"> Responsive Tester </a>
+      <a id="btn-enlace" href="#seccion6"> Deteccion de Dispositivos </a>
+      <a id="btn-enlace" href="#seccion7"> Detecccion CamaraWeb </a>
+      <a id="btn-enlace" href="#seccion8"> Geolocalizacion </a>
+      <a id="btn-enlace" href="#seccion9"> Filtro de Busqueda </a>
+      <a id="btn-enlace" href="#seccion10"> Sorteo </a>
+      <a id="btn-enlace" href="#seccion11"> Slider Responsivo </a>
+    </nav>
+
+    <main class="contenedor">
+      <section id="seccion1" class="section-contenido">
+        <h2>Reloj Digital y Alarma Sonora</h2>
+        <div id="reloj-digital" class="tempo" data-dark="panel">
+          <h3>00:00:00</h3>
+        </div>
+        <div class="btns-reloj-dig">
+          <div>
+            <button id="btn-inciarReloj">Iniciar Reloj</button>
+            <button id="btn-iniciaAlarma">Iniciar Alarma</button>
+          </div>
+          <div>
+            <button id="btn-detenerReloj">Detener Reloj</button>
+            <button id="btn-detenerAlarma">Detener Alarma</button>
+          </div>
+        </div>
+      </section>
+      <section id="seccion2" class="section-contenido">
+        <h2>Eventos del teclado</h2>
+        <article class="stage" data-dark="panel">
+          <div class="ball"></div>
+        </article>
+      </section>
+      <section id="seccion3" class="section-contenido">
+        <h2>Countdown</h2>
+        <div id="countdown" class="tempo" data-dark="panel">
+          <h3>Countdown</h3>
+        </div>
+      </section>
+      <section id="seccion4" class="section-contenido">
+        <h2>Responsive with JavaScript</h2>
+        <div id="youtube"></div>
+        <div id="gmaps"></div>
+      </section>
+      <section id="seccion5" class="section-contenido">
+        <h2>Responsive Tester</h2>
+        <form id="formRT">
+          <input name="url" type="text" placeholder="URL" class="input" />
+          <input name="ancho" type="number" placeholder="width" class="input" />
+          <input name="alto" type="number" placeholder="height" class="input" />
+          <div class="btns-reloj-dig">
+            <button id="btn-open-RW">Abrir</button>
+            <button id="btn-close-RW">Cerrar</button>
+          </div>
+        </form>
+      </section>
+      <section id="seccion6" class="section-contenido">
+        <h2>Deteccion de dispositivos <br />(User Agent)</h2>
+        <div id="user-device"></div>
+      </section>
+      <section id="seccion7" class="section-contenido">
+        <h2>Deteccion Camara WEB</h2>
+
+        <div>
+          <video id="webcam"></video>
+        </div>
+        <button id="btn-photo">Foto</button>
+      </section>
+
+      <section id="seccion8" class="section-contenido">
+        <h2>Geolocalizacion</h2>
+        <div id="geolocalizacion">
+          <p><a id="maps" target="_blank">Abrir en Google Maps</a></p>
+        </div>
+      </section>
+
+      <section id="seccion9" class="section-contenido">
+        <h2>Filtros de busqueda</h2>
+
+        <input type="search" placeholder="Buscar..." class="card-filter" />
+        <article class="cards">
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+            <figcaption>Nature</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/any" alt="Any" />
+            <figcaption>Any</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+            <figcaption>Tech</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/animals" alt="Animals" />
+            <figcaption>Animals</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/people" alt="People" />
+            <figcaption>People</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/arch" alt="Architecture" />
+            <figcaption>Architecture</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section id="seccion10" class="section-contenido">
+        <h2>Sorteo</h2>
+
+        <div id="contenedor-lista-sorteo">
+          <ul id="lista-sorteo"></ul>
+          <button id="btn-sorteo">Sorteo</button>
+        </div>
+      </section>
+
+      <section id="seccion11" class="section-contenido">
+        <div class="slider">
+          <div class="slider-slides">
+            <div class="slider-slide active" >
+              <img src="https://placeimg.com/400/400/animals" alt="animals" />
+            </div>
+            <div class="slider-slide slide-next">
+              <h4>Diapositiva 2</h4>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis minus, vero necessitatibus aut tempora id
+                voluptatibus similique quasi, ipsa itaque, officiis a iusto
+                laudantium laborum! Quam accusantium iusto eligendi ab!
+              </p>
+            </div>
+            <div class="slider-slide">
+              <img src="https://placeimg.com/400/400/nature" alt="nature" />
+            </div>
+            <div class="slider-slide slide-prev">
+              <h4>Diapositiva 4</h4>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis minus, vero necessitatibus aut tempora id
+                voluptatibus similique quasi, ipsa itaque, officiis a iusto
+                laudantium laborum! Quam accusantium iusto eligendi ab!
+              </p>
+            </div>
+            <div class="slider-slide slide-prev">
+              <img src="https://placeimg.com/400/400/arch" alt="Architecture" />
+              
+            </div>
+          </div>
+          <div class="slider-btns">
+            <a id="prev" href="#">&laquo;</a>
+            <a id="next" href="#">&raquo;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="btn disabled" id="btn-scroll">
+      <div class="arrow-scroll">
+        <div class="uno barra"></div>
+        <div class="dos barra"></div>
+      </div>
+    </button>
+
+    <button class="btn" id="btn-dark-theme">
+      <div class="img-btn-dark"></div>
+    </button>
+
+    <script src="js/index_dom.js" type="module"></script>
+  </body>
+</html>
