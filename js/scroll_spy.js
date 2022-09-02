@@ -2,26 +2,20 @@ const d = document,
   w = window;
 
 export default function scrollSpy() {
+
   const $elementosSectionData = d.querySelectorAll("section[data-scrollSpy]");
 
-  const cb = (entries) => {
-    console.log("entries" + entries);
-
+ const cb = (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
       let id = entry.target.getAttribute("id");
         
       console.log(`Estas en la ${id}`);
-      }
-      
-     // console.log(entry);
-      
+      }      
     });
-    
-  
   };
 
-  const observer = new IntersectionObserver(cb, {});
+  const observer = new IntersectionObserver(cb, {threshold:[0.4]});
 
   $elementosSectionData.forEach((el) => observer.observe(el));
 
