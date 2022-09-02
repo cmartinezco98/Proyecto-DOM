@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+w = window;
 
 //****************************** Funciones ******************************/
 
@@ -35,13 +36,17 @@ function toChangeColorOfHamburguerBtnBars(e, bool) {
 
 export default function menuHamburguesa(btnHamburguesa, menuPanel, btnMenu) {
   //****************************** Delegacion de eventos ******************************/
-
+  
   d.addEventListener("click", (e) => {
-    //? Metodo matches() valida si contiene el string, si coincide se activa el evento
-    if (e.target.matches(btnHamburguesa) || e.target.matches(btnMenu)) {
-      cambioClaseActivado(btnHamburguesa, menuPanel);
-      deshabilitarScroll();
+
+    if (w.matchMedia("(max-width:1024px)").matches) {
+      //? Metodo matches() valida si contiene el string, si coincide se activa el evento
+      if (e.target.matches(btnHamburguesa) || e.target.matches(btnMenu)) {
+        cambioClaseActivado(btnHamburguesa, menuPanel);
+        deshabilitarScroll();
     }
+    
+  }
   });
 
   

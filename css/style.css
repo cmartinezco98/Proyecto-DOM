@@ -120,7 +120,6 @@ a {
 
 
 #btn-nav-hamburguesa {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,12 +297,11 @@ a {
 .section-contenido {
   text-align: center;
   min-height: 100vh;
-  height: 100%;
+  height: auto;
   padding: 8rem 0 2rem;
 }
 
 #nav-principal {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -579,5 +577,61 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+}
+
+/** Menu Scroll Spy **/
+
+@media(min-width: 1024px) {
+  
+  body{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 6rem auto ;
+  grid-template-areas: 
+  "header header"
+  "main   panel";
+  }
+
+main{
+  grid-area:main;
+}
+
+#nav-principal{
+grid-area: panel;
+position: sticky;
+top: 6rem;
+transform: translate(0,0);
+opacity: 1;
+visibility: visible;
+height: 90.8vh;
+
+}
+
+#nav-principal a{
+  font-size: 1.5rem;
+  justify-content:flex-start;
+  padding:1rem ;
+  }
+
+  #nav-principal .scroll-spy {
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    transition: all 0.3s ease;
+  }
+ 
+
+.section-header{
+grid-area:header;
+} 
+
+#btn-scroll{
+  right: 0;
+  left: 75px;
+}
+
+#btn-nav-hamburguesa{
+ display: none;
+}
 
 }

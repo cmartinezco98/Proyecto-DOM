@@ -5,17 +5,23 @@ export default function scrollSpy() {
 
   const $elementosSectionData = d.querySelectorAll("section[data-scrollSpy]");
 
+
+
  const cb = (entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+
       let id = entry.target.getAttribute("id");
-        
-      console.log(`Estas en la ${id}`);
-      }      
+
+      if (entry.isIntersecting) {
+         d.querySelector(`a[data-scrollSpy][href="#${id}"]`).classList.add("scroll-spy");
+      }
+      else{
+        d.querySelector(`a[data-scrollSpy][href="#${id}"]`).classList.remove("scroll-spy");
+      }
     });
   };
 
-  const observer = new IntersectionObserver(cb, {threshold:[0.4]});
+  const observer = new IntersectionObserver(cb, {threshold:[0.5,0.75]});
 
   $elementosSectionData.forEach((el) => observer.observe(el));
 
