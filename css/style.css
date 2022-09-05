@@ -633,5 +633,22 @@ grid-area:header;
 #btn-nav-hamburguesa{
  display: none;
 }
-
 }
+
+#smartVideo {
+  position: relative;
+  max-height:450px;
+  height: 0px;
+  padding-top:56.25%;
+  width: 100%;
+}
+
+#smartVideo iframe{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;    
+}
+
+
