@@ -15,6 +15,7 @@ import sorteo from "./sorteo.js";
 import carrusel from "./carrusel.js";
 import scrollSpy from "./scroll_spy.js";
 import smartVideo from "./smart_video.js";
+import validacionFormulario from "./validacion_formulario.js";
 //192.168.39.114 puerto wifi
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   carrusel();
   scrollSpy();
   smartVideo();
+  validacionFormulario();
 });
 
 darkTheme("#btn-dark-theme", "dark-theme", "panel");

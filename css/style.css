@@ -711,7 +711,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contact-form-error {
   margin-top: -1rem;
-  font-size: 80%;
+  font-size: 1.2rem;
+  font-weight: bold;
   background-color: var(--form-error-color);
   color: #fff;
   transition: all 800ms ease;
