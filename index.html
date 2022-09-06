@@ -17,7 +17,6 @@
     <title>Ejercicios Practicos del DOM</title>
   </head>
   <body data-dark>
-
     <div id="network"></div>
     <header class="section-header">
       <div class="contenedor">
@@ -33,20 +32,34 @@
       </div>
     </button>
 
-    <nav id="nav-principal" >
-      <a id="btn-enlace" href="#seccion1" data-scrollSpy> Reloj Digital y Alarma Sonora </a>
-      <a id="btn-enlace" href="#seccion2" data-scrollSpy> Eventos del teclado </a>
+    <nav id="nav-principal">
+      <a id="btn-enlace" href="#seccion1" data-scrollSpy>
+        Reloj Digital y Alarma Sonora
+      </a>
+      <a id="btn-enlace" href="#seccion2" data-scrollSpy>
+        Eventos del teclado
+      </a>
       <a id="btn-enlace" href="#seccion3" data-scrollSpy> Countdown </a>
-      <a id="btn-enlace" href="#seccion4" data-scrollSpy> Responsive with JavaScript </a>
+      <a id="btn-enlace" href="#seccion4" data-scrollSpy>
+        Responsive with JavaScript
+      </a>
       <a id="btn-enlace" href="#seccion5" data-scrollSpy> Responsive Tester </a>
-      <a id="btn-enlace" href="#seccion6" data-scrollSpy> Deteccion de Dispositivos </a>
-      <a id="btn-enlace" href="#seccion7" data-scrollSpy> Detecccion CamaraWeb </a>
+      <a id="btn-enlace" href="#seccion6" data-scrollSpy>
+        Deteccion de Dispositivos
+      </a>
+      <a id="btn-enlace" href="#seccion7" data-scrollSpy>
+        Detecccion CamaraWeb
+      </a>
       <a id="btn-enlace" href="#seccion8" data-scrollSpy> Geolocalizacion </a>
-      <a id="btn-enlace" href="#seccion9" data-scrollSpy> Filtro de Busqueda </a>
+      <a id="btn-enlace" href="#seccion9" data-scrollSpy>
+        Filtro de Busqueda
+      </a>
       <a id="btn-enlace" href="#seccion10" data-scrollSpy> Sorteo </a>
-      <a id="btn-enlace" href="#seccion11" data-scrollSpy> Slider Responsivo </a>
+      <a id="btn-enlace" href="#seccion11" data-scrollSpy>
+        Slider Responsivo
+      </a>
       <a id="btn-enlace" href="#seccion12" data-scrollSpy> Video inteligente</a>
-      <a id="btn-enlace" href="#seccion12" data-scrollSpy> seccion 12</a>
+      <a id="btn-enlace" href="#seccion13" data-scrollSpy> Envio Formularios</a>
       <a id="btn-enlace" href="#seccion12" data-scrollSpy> seccion 12</a>
       <a id="btn-enlace" href="#seccion12" data-scrollSpy> seccion 12</a>
     </nav>
@@ -167,7 +180,7 @@
         <h2>Slider Responsivo</h2>
         <div class="slider">
           <div class="slider-slides">
-            <div class="slider-slide active" >
+            <div class="slider-slide active">
               <img src="https://placeimg.com/400/400/animals" alt="animals" />
             </div>
             <div class="slider-slide slide-next">
@@ -195,7 +208,6 @@
             </div>
             <div class="slider-slide slide-prev">
               <img src="https://placeimg.com/400/400/arch" alt="Architecture" />
-              
             </div>
           </div>
           <div class="slider-btns">
@@ -209,15 +221,69 @@
         <h2>Video inteligente</h2>
 
         <div id="smartVideo">
-        <iframe src="/assets/Tiago PZK - Eléctrica ft. IZA (Visualizer Oficial).mp4" controls></iframe>  
-      </div>
-      </section>  
+          <video
+            src="/assets/Tiago PZK - Eléctrica ft. IZA (Visualizer Oficial).mp4"
+            controls
+            muted
+            loop
+            data-smart-video
+          ></video>
+        </div>
+      </section>
 
+      <section id="seccion13" class="section-contenido" data-scrollSpy>
+        
+        <h2>Validacion Formulario</h2>
 
+        <form class="contact-form">
+          <legend>Envio de Comentarios</legend>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre"
+            title="Nombre solo acepta letras y espacios en blanco"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,50}$"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            title="Email incorrecto"
+            pattern="^^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            title="El asunto es requerido"
+            placeholder="Asunto a tratar"
+            required
+          />
+          <textarea
+            name="comments"
+            id=""
+            cols="50"
+            rows="5"
+            placeholder="Escribe tus comentarios"
+            title="Tu comentario no debe exceder los 255 caracteres"
+            data-pattern="^.{1,255}$"
+            required
+          ></textarea>
+          <input type="submit" value="Enviar" />
+
+          <div class="contact-form-loader none">
+            <img src="assets/loader.svg" alt="cargando" />
+          </div>
+          <div class="contact-form-response none">
+            <p>Los datos han sido enviados</p>
+          </div>
+        </form>
+      </section>
     </main>
 
     <button class="btn disabled" id="btn-scroll">
-
       <div class="arrow-scroll">
         <div class="uno barra"></div>
         <div class="dos barra"></div>

@@ -14,6 +14,7 @@ import searchFilter from "./filtro_busqueda.js";
 import sorteo from "./sorteo.js";
 import carrusel from "./carrusel.js";
 import scrollSpy from "./scroll_spy.js";
+import smartVideo from "./smart_video.js";
 //192.168.39.114 puerto wifi
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -43,12 +44,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
   responsiveTester("#formRT", "#btn-open-RW", "#btn-close-RW");
   networkStatus("network");
   userDevice("user-device");
-  webCam("webcam","btn-photo");
-  geolocalizacion("geolocalizacion","maps");
-  searchFilter(".card-filter",".card");
-  sorteo("lista-sorteo","#btn-sorteo")
+  webCam("webcam", "btn-photo");
+  geolocalizacion("geolocalizacion", "maps");
+  searchFilter(".card-filter", ".card");
+  sorteo("lista-sorteo", "#btn-sorteo");
   carrusel();
   scrollSpy();
+  smartVideo();
 });
 
 darkTheme("#btn-dark-theme", "dark-theme", "panel");

@@ -6,6 +6,8 @@
   --color-black: #222;
   --font-roboto: font-family: 'Roboto', sans-serif;
   --container-width: 1200px;
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
 }
 
 /** Generales **/
@@ -302,6 +304,7 @@ a {
 }
 
 #nav-principal {
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -528,7 +531,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   top: 0;
   left: 0;
-  transition: transform 1s ease,visibility 1s;
+  transition: transform 1s ease, visibility 1s;
   visibility: hidden;
 }
 
@@ -564,7 +567,7 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  margin:0 1rem;
+  margin: 0 1rem;
 }
 
 .slider a:hover {
@@ -583,35 +586,35 @@ input[type="number"]::-webkit-inner-spin-button {
 /** Menu Scroll Spy **/
 
 @media(min-width: 1024px) {
-  
-  body{
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: 6rem auto ;
-  grid-template-areas: 
-  "header header"
-  "main   panel";
+
+  body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 6rem auto;
+    grid-template-areas:
+      "header header"
+      "main   panel";
   }
 
-main{
-  grid-area:main;
-}
+  main {
+    grid-area: main;
+  }
 
-#nav-principal{
-grid-area: panel;
-position: sticky;
-top: 6rem;
-transform: translate(0,0);
-opacity: 1;
-visibility: visible;
-height: 90.8vh;
+  #nav-principal {
+    grid-area: panel;
+    position: sticky;
+    top: 6rem;
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+    height: 90.8vh;
 
-}
+  }
 
-#nav-principal a{
-  font-size: 1.5rem;
-  justify-content:flex-start;
-  padding:1rem ;
+  #nav-principal a {
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    padding: 1rem;
   }
 
   #nav-principal .scroll-spy {
@@ -619,36 +622,116 @@ height: 90.8vh;
     background-color: var(--color-yellow);
     transition: all 0.3s ease;
   }
- 
 
-.section-header{
-grid-area:header;
-} 
 
-#btn-scroll{
-  right: 0;
-  left: 75px;
-}
+  .section-header {
+    grid-area: header;
+  }
 
-#btn-nav-hamburguesa{
- display: none;
-}
+  #btn-scroll {
+    right: 0;
+    left: 75px;
+  }
+
+  #btn-nav-hamburguesa {
+    display: none;
+  }
 }
 
 #smartVideo {
   position: relative;
-  max-height:450px;
+  max-height: 450px;
   height: 0px;
-  padding-top:56.25%;
+  padding-top: 56.25%;
   width: 100%;
 }
 
-#smartVideo iframe{
-    position:absolute;
-    height:100%;
-    width:100%;
-    top:0px;
-    left:0px;    
+#smartVideo video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
 }
 
+/** Formularios **/
 
+.contact-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.contact-form>* {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.contact-form input[type="submit"] {
+  width: 50%;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form *::placeholder {
+  color: var(--color-black);
+}
+
+.contact-form [required]:valid {
+  border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+  border: thin solid var(--form-error-color);
+}
+
+.none {
+  display: none;
+}
+
+.contact-form-error {
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+
+
+  100% {
+    visibility: visible;
+    opacity: 100%;
+
+  }
+}
